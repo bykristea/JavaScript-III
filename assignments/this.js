@@ -14,10 +14,10 @@ for creating and initializing an object created with a class.
 
 // code example for Window Binding
 
-function rock () {
+function stone () {
     console.log(this);
 }
-rock();
+stone();
 
 // Principle 2
 
@@ -54,7 +54,7 @@ newman.speak();
 // Principle 4
 
 // code example for Explicit Binding
-const rock = {
+const gem = {
     name: 'Amethyst'
 }
 
@@ -64,4 +64,4 @@ function rockProperties(uses1, uses2, uses3) {
     "use strict";
     console.log(`${this.name}, can be used to aid in ${uses1}, ${uses2}, and  ${uses3}`);
 }
-rockProperties.call(rock, uses);
+rockProperties.call(gem, uses);
