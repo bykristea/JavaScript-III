@@ -64,4 +64,4 @@ function rockProperties(uses1, uses2, uses3) {
     "use strict";
     console.log(`${this.name}, can be used to aid in ${uses1}, ${uses2}, and  ${uses3}`);
 }
-rockProperties.call(gem, uses);
+rockProperties.apply(gem, uses);
