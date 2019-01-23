@@ -135,5 +135,35 @@ CharacterStats.prototype.takeDamage = function () {
 
   // Stretch task: 
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
+function Villain(villainAttributes) {
+  this.name = villainAttributes.name;
+  this.weapon = villainAttributes.weapon;
+  this.healthPoints = villainAttributes.healthPoints;
+  CharacterStats.call(this, villainAttributes);
+}
+
+Villain.prototype = Object.create(Humanoid.prototype);
+
+Villain.prototype.removeHealth = function () { 
+  
+  return `${this.name} took ${this.healthPoints}-1 with ${this.weapon}`;
+}
+
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
+
+  const villain = new Villain({
+    createdAt: new Date(),
+    dimensions: {
+      length: 1,
+      width: 2,
+      height: 4,
+    },
+    healthPoints: 10,
+    name: 'Sauron',
+    team: 'Bad Kingdom',
+    weapon: 'Poison',
+    language: 'Hurbblurb',
+  });
+
+    console.log(villain.removeHealth());
