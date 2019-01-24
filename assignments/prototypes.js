@@ -145,8 +145,8 @@ function Villain(villainAttributes) {
 Villain.prototype = Object.create(Humanoid.prototype);
 
 Villain.prototype.removeHealth = function () { 
-  
-  return `${this.name} took ${this.healthPoints}-1 with ${this.weapon}`;
+  if ( [hp] = healthPoints, hp < Array.length, hp - 2) 
+  return `${this.name} took 2 HP with ${this.weapon}. You know have ${this.healthPoints} HP `;
 }
 
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
